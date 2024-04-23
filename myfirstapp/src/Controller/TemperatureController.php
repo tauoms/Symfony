@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 class TemperatureController extends AbstractController {
 
-    #[Route('temp/', name: "temperature converter")]
+    #[Route('/temp', name: "temperature converter")]
     public function temperatureConversion(Request $request) {
         $temp = $request->query->get('temperature');
 
