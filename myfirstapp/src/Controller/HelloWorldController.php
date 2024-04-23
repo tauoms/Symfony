@@ -8,9 +8,9 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class HelloWorldController extends AbstractController {
 
-    #[Route('/hello')]
+    #[Route('/', name: "hello_world")]
     public function helloWorld() {
-        return new Response('Hello Symfony 7');
+        return new Response('Pink Floyd --- Another Brick In the wall');
     }
 
 }
