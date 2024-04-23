@@ -18,7 +18,7 @@ class TemperatureController extends AbstractController {
             return new Response("Error: Temperature must be a number", 400);     
         } else {
             $fahrenheit = ($temp * 9 / 5) + 32;  
-            $celsius = ($temp-32)/1.8;   
+            $celsius = round(($temp-32)/1.8, 1);   
             // Return the converted temperature     
             return new Response("{$temp} C in Fahrenheit : {$fahrenheit}F / {$temp} F in Celsius : {$celsius}");   
         }
