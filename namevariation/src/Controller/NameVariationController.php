@@ -9,12 +9,12 @@ use Symfony\Component\HttpFoundation\Request;
 
 class NameVariationController extends AbstractController {
 
-    #[Route('/', name: "name variation")]
-    public function index(Request $request): Response 
-    {
+    #[Route('/', name: "name_variation")]
+    public function index(Request $request) : Response
+    { 
         $name = $request->query->get('name', '');
-
         $nameDetails = [];
+
 		if (!empty($name)) { 
 			$nameDetails = [
 				'number_of_characters' => strlen($name),
