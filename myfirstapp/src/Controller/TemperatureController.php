@@ -20,7 +20,7 @@ class TemperatureController extends AbstractController {
             $fahrenheit = ($temp * 9 / 5) + 32;  
             $celsius = round(($temp-32)/1.8, 1);   
             // Return the converted temperature     
-            return new Response("{$temp} C in Fahrenheit : {$fahrenheit}F / {$temp} F in Celsius : {$celsius}");   
+            return new Response("{$temp} C in Fahrenheit: {$fahrenheit}F / {$temp} F in Celsius: {$celsius}");   
         }
     }
 
