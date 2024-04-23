@@ -7,6 +7,8 @@
 	<main class="container">
 		<div>
 			<label class="label" for="component-name">Enter your name</label>
+
+			{# path name defined in Controller! #}
 			<form method="get" action="{{ path('name_variation') }}">
 				<input type="text" name="name" class="input" placeholder="Your name" id="your-name" autocomplete="off">
 			</form>
