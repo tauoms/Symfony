@@ -15,7 +15,7 @@ class HomeController extends AbstractController {
         $homeData = [
 			"Home data 1" => "some data",
 			"Home data 2" => "some more data",
-			"Home data 3" => "some even more data",
+			"Home data 3" => "even more data",
 		];
 
 		
