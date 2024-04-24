@@ -16,7 +16,7 @@ class AboutController extends AbstractController {
 
 		
 			
-			return $this->render('link_pages/about.html.twig', [
+			return $this->render('about/index.html.twig', [
 				'aboutString' => $aboutString, 
 			]); 
 		}

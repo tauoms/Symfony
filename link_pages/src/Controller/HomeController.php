@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 class HomeController extends AbstractController {
 
-    #[Route('/', name: "home")]
+    #[Route('/home', name: "home")]
     public function homePage() : Response
     { 
         $homeData = [
@@ -20,7 +20,7 @@ class HomeController extends AbstractController {
 
 		
 			
-			return $this->render('link_pages/index.html.twig', [
+			return $this->render('home/index.html.twig', [
 				'homeData' => $homeData, 
 			]); 
 		}
