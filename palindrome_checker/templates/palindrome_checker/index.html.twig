@@ -12,11 +12,14 @@
 			{# path name defined in Controller! #}
 			<form method="get" action="{{ path('palindrome_checker') }}">
 				<input type="text" name="inputStr" class="input" placeholder="palindrome here" id="inputStr" autocomplete="off">
+				<input type="submit">
+
 			</form>
 		</div>
-
 		{% if inputStr %}
-			<h2>Result for "{{ inputStr }}"</h2>
+			<h2>
+				for "{{ inputStr }}"
+			</h2>
 			<p>
 				{{ isPalindrome ? 'This is in fact a palindrome!' : 'Sadly this is not a palindrome. :(' }}
 			</p>
