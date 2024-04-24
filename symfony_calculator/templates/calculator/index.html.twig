@@ -10,7 +10,7 @@
 
 			{# path name defined in Controller! #}
 			<form method="get" action="{{ path('calculator') }}">
-				<input type="text" name="value1" class="input" id="value1" autocomplete="off">
+				<input type="number" name="value1" class="input" id="value1" autocomplete="off">
 
 				<select name="operation" id="operation">
 					<option value="addition">+ Add</option>
@@ -18,7 +18,7 @@
 					<option value="multiplication">* Multiply</option>
 					<option value="division">/ Divide</option>
 				</select>
-				<input type="text" name="value2" class="input" id="value2" autocomplete="off">
+				<input type="number" name="value2" class="input" id="value2" autocomplete="off">
 				<input type="submit">
 
 			</form>
