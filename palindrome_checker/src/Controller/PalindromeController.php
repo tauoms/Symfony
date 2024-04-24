@@ -16,7 +16,11 @@ class PalindromeController extends AbstractController {
         $isPalindrome = false;
 
 		if (!empty($inputStr)) { 
-			$isPalindrome = true; 
+			if ($inputStr === strrev($inputStr)) {
+				$isPalindrome = true;
+			} else {
+				$isPalindrome = false;
+			}
 			}
 			
 			return $this->render('palindrome_checker/index.html.twig', [

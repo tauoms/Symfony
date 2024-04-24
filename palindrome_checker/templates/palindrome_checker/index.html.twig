@@ -1,0 +1,25 @@
+{% extends'base.html.twig' %}
+
+{% block title %}Palindrome Checker
+{% endblock %}
+
+{% block body %}
+	<main class="container">
+		<div>
+			<label class="label" for="component-name">Enter palindrome to check:
+			</label>
+
+			{# path name defined in Controller! #}
+			<form method="get" action="{{ path('palindrome_checker') }}">
+				<input type="text" name="inputStr" class="input" placeholder="palindrome here" id="inputStr" autocomplete="off">
+			</form>
+		</div>
+
+		{% if inputStr %}
+			<h2>Result for "{{ inputStr }}"</h2>
+			<p>
+				{{ isPalindrome ? 'This is infact a palindrome!' : 'Sadly this is not a palindrome. :(' }}
+			</p>
+		{% endif %}
+	</main>
+{% endblock %}
