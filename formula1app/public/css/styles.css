@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  padding: 1rem;
+  background-color: #383241;
+  color: rgb(169, 160, 149);
+}
+
+a {
+  color: #b3a6a6;
+}
+
+h1,
+h2 {
+  color: antiquewhite;
+}
+
+.card {
+  background-color: rgb(79, 74, 84);
+  padding: 1rem 2rem;
+  margin: 1rem;
+}
+
+.card p {
+  margin: 10px 0;
+}
