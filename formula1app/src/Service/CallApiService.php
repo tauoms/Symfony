@@ -1,9 +1,13 @@
 <?php
+
 namespace App\Service;
+
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
 class CallApiService {
+    
     private $httpClient;
+
     public function __construct(HttpClientInterface $httpClient)  
     {
         $this->httpClient = $httpClient;
