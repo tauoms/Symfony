@@ -12,7 +12,7 @@
 		{% for data in data.MRData.RaceTable.Races %}
 			<div class="card">
 				<h2>
-					<a href="{{data.url|e}}">{{data.raceName|e}}</a>
+					<a href="{{data.url|e}}" target="_blank">{{data.raceName|e}}</a>
 				</h2>
 				<p>Circuit:
 					{{data.Circuit.circuitName|e}}

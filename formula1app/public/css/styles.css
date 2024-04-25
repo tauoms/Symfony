@@ -6,7 +6,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  padding: 1rem;
+  padding: 4rem;
   background-color: #383241;
   color: #bcb2a6;
 }
@@ -20,10 +20,15 @@ h2 {
   color: antiquewhite;
 }
 
+h1 {
+  margin: 0 1rem;
+}
+
 .card {
   background-color: rgb(79, 74, 84);
   padding: 1rem 2rem;
   margin: 1rem;
+  border-radius: 8px;
 }
 
 .card p {
