@@ -12,9 +12,9 @@ class Formula1Controller extends AbstractController
     #[Route('/', name: 'app_formula1')]
     public function index(CallApiService $callApiService): Response
     {
-        dump($callApiService->getRacesIn2024());
+        // dump($callApiService->getRacesIn2024());
         return $this->render('formula1/index.html.twig', [
-            'controller_name' => 'Formula1Controller',
+            'data' => $callApiService->getRacesIn2024(),
         ]);
     }
 }
