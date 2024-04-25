@@ -31,13 +31,22 @@ h1 {
 }
 
 .card {
+  display: flex;
+  justify-content: space-between;
   background-color: rgb(79, 74, 84);
   padding: 1rem 2rem;
   margin: 1rem;
   border-radius: 8px;
-  box-shadow: 0px 10px 15px -3px rgba(92, 90, 104, 0.1);
+  box-shadow: 0px 10px 15px -3px #6c83751a;
 }
 
 .card p {
-  margin: 10px 0;
+  margin: 1rem 0;
+}
+
+.card img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  margin-left: 2rem;
 }

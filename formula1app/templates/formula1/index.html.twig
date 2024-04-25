@@ -6,11 +6,11 @@
 {% block body %}
 
 
-	<div class="example-wrapper">
-		<h1>Formula 1 Race Data 2024</h1>
-		{# {{ data.MRData.RaceTable.Races.0.raceName }} #}
-		{% for data in data.MRData.RaceTable.Races %}
-			<div class="card">
+	<h1>Formula 1 Race Data 2024</h1>
+	{# {{ data.MRData.RaceTable.Races.0.raceName }} #}
+	{% for data in data.MRData.RaceTable.Races %}
+		<div class="card">
+			<div class="textContent">
 				<h2>
 					<a href="{{data.url|e}}" target="_blank">{{data.raceName|e}}</a>
 				</h2>
@@ -28,6 +28,7 @@
 					{{data.date|e}}
 				</p>
 			</div>
-		{% endfor %}
-	</div>
+			<img src="http://source.unsplash.com/random/?f1-{{data.Circuit.circuitName|e|replace({' ': '-'})}}" alt="Photo of {{data.Circuit.circuitName|e}}">
+		</div>
+	{% endfor %}
 {% endblock %}
