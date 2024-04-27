@@ -16,16 +16,16 @@ class PalindromeController extends AbstractController {
         $isPalindrome = false;
 		$message= '';
 
-		if (!empty($inputStr) && !is_numeric($inputStr) && !preg_match('/[\'^£€$%&*()}{@#~?><>,|=_+¬-]/', $inputStr)) { 
+		if (!empty($inputStr) && !preg_match('~[0-9]+~', $inputStr) && !preg_match('/[\'^£€$%&*()}{@#~?><>,|=_+¬-]/', $inputStr)) { 
 			if ($inputStr === strrev($inputStr)) {
 				$isPalindrome = true;
 			} else {
 				$isPalindrome = false;
 			}
-		} else if (!empty($inputStr) && is_numeric($inputStr)) {
+		} else if (!empty($inputStr) && preg_match('~[0-9]+~', $inputStr)) {
 			$inputStr = null;
 			$isPalindrome = false;
-			$message = 'You entered numbers. Please enter a word instead.';
+			$message = 'You entered numbers. Please enter a word with only letters.';
 		} else if (!empty($inputStr) && preg_match('/[\'^£€$%&*()}{@#~?><>,|=_+¬-]/', $inputStr)) {
 			$inputStr = null;
 			$isPalindrome = false;
