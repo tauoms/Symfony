@@ -35,7 +35,7 @@ class CalculatorController extends AbstractController {
 					if ($value2 == 0) {
 						$solution = 'Can not divide by zero.';
 					} else {
-					$solution = $value1 / $value2;
+						$solution = $value1 / $value2;
 					}
 					break;
 				default:
