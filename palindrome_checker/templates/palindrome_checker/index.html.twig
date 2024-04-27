@@ -18,11 +18,15 @@
 		</div>
 		{% if inputStr %}
 			<h2>
-				Solution for "{{ inputStr }}"
+				Solution for "{{ inputStr|e }}"
 			</h2>
 			<p>
 				{{ isPalindrome ? 'This is in fact a palindrome!' : 'Sadly this is not a palindrome. :(' }}
 			</p>
 		{% endif %}
+		{% if message %}
+			<p>{{ message }}</p>
+		{% endif %}
+
 	</main>
 {% endblock %}

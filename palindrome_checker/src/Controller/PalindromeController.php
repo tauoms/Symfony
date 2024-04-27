@@ -14,18 +14,28 @@ class PalindromeController extends AbstractController {
     { 
         $inputStr = $request->query->get('inputStr');
         $isPalindrome = false;
+		$message= '';
 
-		if (!empty($inputStr)) { 
+		if (!empty($inputStr) && !is_numeric($inputStr) && !preg_match('/[\'^£€$%&*()}{@#~?><>,|=_+¬-]/', $inputStr)) { 
 			if ($inputStr === strrev($inputStr)) {
 				$isPalindrome = true;
 			} else {
 				$isPalindrome = false;
 			}
-			}
-			
+		} else if (!empty($inputStr) && is_numeric($inputStr)) {
+			$inputStr = null;
+			$isPalindrome = false;
+			$message = 'You entered numbers. Please enter a word instead.';
+		} else if (!empty($inputStr) && preg_match('/[\'^£€$%&*()}{@#~?><>,|=_+¬-]/', $inputStr)) {
+			$inputStr = null;
+			$isPalindrome = false;
+			$message = "Please don't include special characters in your input.";
+		}
+		
 			return $this->render('palindrome_checker/index.html.twig', [
 				'inputStr' => $inputStr,
-				'isPalindrome' => $isPalindrome, 
+				'isPalindrome' => $isPalindrome,
+				'message' => $message
 			]); 
 		}
 	}
