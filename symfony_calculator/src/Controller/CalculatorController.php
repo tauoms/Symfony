@@ -18,7 +18,8 @@ class CalculatorController extends AbstractController {
         $value1 = $request->query->get('value1');
         $value2 = $request->query->get('value2');
         $operation = $request->query->get('operation');
-        $solution = '';
+        $solution = 0;
+		$message = '';
 
 		if (!empty($value1) && !empty($value2)) { 
 			switch ($operation) {
@@ -33,19 +34,22 @@ class CalculatorController extends AbstractController {
 					break;
 				case 'division':
 					if ($value2 == 0) {
-						$solution = 'Can not divide by zero.';
+						$value2 = 1;
+						$solution = $value1 / $value2;
+						$message = 'Can not divide by zero.';
 					} else {
 						$solution = $value1 / $value2;
 					}
 					break;
 				default:
-					$solution = 'Something went wrong. Please try again.';
+					$message = 'Something went wrong. Please try again.';
 					break;
 				}
 			}
 			
 			return $this->render('calculator/index.html.twig', [
 				'solution' => $solution,
+				'message' => $message
 			]); 
 		}
 	}

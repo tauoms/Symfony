@@ -17,7 +17,7 @@ class PalindromeController extends AbstractController {
 		$message= '';
 
 		if (!empty($inputStr) && !preg_match('~[0-9]+~', $inputStr) && !preg_match('/[\'^£€$%&*()}{@#~?><>,|=_+¬-]/', $inputStr)) { 
-			if ($inputStr === strrev($inputStr)) {
+			if (strtolower($inputStr) === strrev(strtolower($inputStr))) {
 				$isPalindrome = true;
 			} else {
 				$isPalindrome = false;
