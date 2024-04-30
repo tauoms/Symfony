@@ -5,6 +5,7 @@ nbproject
 public/uploads/*
 !public/uploads/.gitkeep
 *.pem
+/vendor/
 
 # env.
 .env
