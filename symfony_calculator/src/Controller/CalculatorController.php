@@ -18,10 +18,10 @@ class CalculatorController extends AbstractController {
         $value1 = $request->query->get('value1');
         $value2 = $request->query->get('value2');
         $operation = $request->query->get('operation');
-        $solution = 0;
+        $solution = null;
 		$message = '';
 
-		if (!empty($value1) && !empty($value2)) { 
+		if ($value1 != null && $value2 != null) { 
 			switch ($operation) {
 				case 'addition':
 					$solution = $value1 + $value2;
