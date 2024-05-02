@@ -21,7 +21,7 @@ class CalculatorController extends AbstractController {
         $solution = null;
 		$message = '';
 
-		if ($value1 != null && $value2 != null) { 
+		if ($value1 !== null && $value2 !== null) { 
 			switch ($operation) {
 				case 'addition':
 					$solution = $value1 + $value2;
